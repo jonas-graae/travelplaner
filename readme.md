@@ -9,8 +9,8 @@ The app does the folliwing when searching for a location:
 - Fetches Map from google Maps Javascript API
 - Have a count down for departure
 
-## Part of Udacity Frontend web development Nanodefgree Program
-This app is fifth and final project in Udacitys Frontend web development Nanodefgree Program. This exercise challenge the student to create a node backend and fetch data from various API's, and combine this into a new travel experience with geoinfo, images and weatherdata. 
+## Part of Udacity Frontend web development Nanodegree Program
+This app is fifth and final project in Udacitys Frontend web development Nanodegree Program. This exercise challenge the student to create a node backend and fetch data from various API's, and combine this into a new travel experience with geoinfo, images and weatherdata. 
 
 ## installation
 
@@ -24,10 +24,10 @@ In order to run this project, type the folling in the terminal:
 ```PB_API_KEY=${your API key}```
 
 3. install all node packages:
-```npm installl```
+```npm install```
 
 4. Build dist folder with final project
-```npm run build-prod```
+```npm run build```
 
 5. Start backend
 ```npm run start```

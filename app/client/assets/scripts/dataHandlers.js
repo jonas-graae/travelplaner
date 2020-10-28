@@ -98,6 +98,7 @@ const getCityInfo = async (city) => {
     const cityName = city ? city : document.getElementById('destination').value;
     const baseURL = 'http://api.geonames.org/searchJSON?q='
     const response = await fetch(baseURL + cityName + '&username=jonas_graae');
+    console.log(response)
 
     if(response.status === 200) {
         let data = await response.json();
