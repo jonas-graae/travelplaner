@@ -1,0 +1,54 @@
+.weather__grid {
+    margin-top: 50px;
+    width: 100%;
+    grid-gap: 50px;
+
+    @include desktop {
+        grid-gap: 100px;
+    }
+}
+
+.weather__today {
+    background-color: #fefefe;
+    width: 100%;
+    min-height: 500px;
+    text-align: center;
+    border-radius: 15px;
+
+    @include tablet {
+        height: 70%;
+    }
+
+    > *  {
+        color: #000;
+    }
+    
+    &__temperature {
+        font-size: 10rem;
+    }
+
+    
+}
+
+.weather__days {
+    background-color: #fefefe;
+    min-height: 500px;
+    border-radius: 15px;
+
+    @include tablet {
+        height: 70%;
+    }
+}
+
+.weather__hourly {
+    background-color: #fefefe;
+    border-radius: 15px;
+    
+    min-height: 500px;
+
+    @include tablet {
+        min-height: 200px;
+        height: 30%;
+        grid-column: 1/3;
+    }
+}

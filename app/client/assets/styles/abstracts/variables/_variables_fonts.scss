@@ -1,0 +1,45 @@
+// FONT
+$default-font-stack: 'Poppins', sans-serif;
+$default-font-size: 1.6em;
+
+//H1-H6 tags is set to $default-font-stack as standard
+$headlines-font-stack: $default-font-stack; 
+
+//Colors
+$default-font-color: #31AFB4;
+$headlines-font-color: #fafafa;
+
+//How many H TAGS to include 1= H1, 2= H1, H2 and so on.
+$number-of-headlines-to-include: 4;
+
+//font-sizes
+$font-sizes: (
+    text: 1.6rem,
+    h1: 3.2rem,
+    h2: 2.6rem,
+    h3: 2.2rem,
+    h4: 1.8rem,
+    h5: 1.7rem,
+    h6: 1.6rem, 
+    tablet: (
+        h1: 4rem,
+        h2: 3.2rem,
+        h3: 2.4rem,
+        h4: 1.8rem
+    ), 
+    desktop: (
+        h1: 4.8rem,
+        h2: 3.6rem,
+        h3: 2.8rem
+    )
+);
+
+//font-weights 
+$font-weights: (
+    h1: 500,
+    h2: 500,
+    h3: 400,
+    h4: 400,
+    h5: 400,
+    h6: 400 
+);

@@ -1,0 +1,60 @@
+.btn {
+  background-color: transparent;
+  padding: 12px 50px; //skal laves om for være skram
+  font-size: 2rem; //skal laves om for være skram
+  border-radius: 30px;
+  font-weight: 400;
+  // transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $default-font-color;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &-full {
+    background-color: $default-font-color;
+    color: #fff;
+    border: none;
+  }
+
+  &-ghost {
+    color: $default-font-color;
+
+    &.pick_date {
+      color: #fff;
+    }
+
+    svg {
+      display: none;
+      height: 25px;
+      width: 25px;
+      margin-left: 20px;
+      fill: #fff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: #fff;
+      stroke-width: 2;
+      transform: translateX(10px);
+      transition: all .3s ease;
+    }
+  }
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type="submit"]{
+	background-color: $default-font-color;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	color: #fff;
+  background-color: $default-font-color;
+  
+  svg {
+    display: block;
+  }
+}

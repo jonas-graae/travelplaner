@@ -1,0 +1,100 @@
+//https://www.impactbnd.com/blog/how-font-sizes-effect-ux //*fontstørrelser bør ændeser på mobil og ipad osv :)
+
+/*%heading is temp class that are not existing, which only works to @extend
+h tags with styling from %heading (basis styling). H tags are afterwards @extend with 
+individual styles from styling below.   */
+
+%heading  {
+  font-family: $headlines-font-stack;
+  color: $headlines-font-color;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+%h1 {
+  font-size: map-get($font-sizes, "h1");
+  line-height: 1.25em;
+  font-weight: map-get($font-weights, "h1");
+
+  @include tablet {
+    // code below gets next level in $font-size list $font-size > tablet > h1
+    font-size: map-get(map-get($font-sizes, "tablet"), "h1");
+    line-height: 1.25em;
+  }
+
+  // code below gets next level in $font-size list $font-size > desktop > h1 
+  @include desktop {
+    font-size: map-get(map-get($font-sizes, "desktop"), "h1");
+    line-height: 1.05em;
+  }
+}
+
+%h2 {
+  font-size: map-get($font-sizes, "h2");
+  line-height: 1.16em;
+  font-weight: map-get($font-weights, "h2");
+
+  @include tablet {
+    font-size: map-get(map-get($font-sizes, "tablet"), "h2");
+    line-height: 1.25em;
+  }
+
+  @include desktop {
+    font-size: map-get(map-get($font-sizes, "desktop"), "h2");
+  }
+}
+
+%h3 {
+  font-size: map-get($font-sizes, "h3");
+  line-height: 1.14em;
+  font-weight: map-get($font-weights, "h3");
+
+  @include tablet {
+    font-size: map-get(map-get($font-sizes, "tablet"), "h3");
+    line-height: 1.25em;
+  }
+
+  @include desktop {
+    font-size: map-get(map-get($font-sizes, "desktop"), "h3");
+    line-height: 1.25em;
+  }
+}
+
+%h4 {
+  font-size: map-get($font-sizes, "h4");
+  letter-spacing: -0.08rem;
+  line-height: 1.11em;
+  font-weight: map-get($font-weights, "h4");
+
+  @include tablet {
+    font-size: map-get(map-get($font-sizes, "tablet"), "h4");
+    letter-spacing: -0.08rem;
+    line-height: 1.22em;
+  }
+}
+
+%h5 {
+  font-size: map-get($font-sizes, "h5");
+  letter-spacing: -0.05rem;
+  line-height: 1.5;
+  font-weight: map-get($font-weights, "h5");
+}
+
+%h6 {
+  font-size: map-get($font-sizes, "h6");
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-weight: map-get($font-weights, "h6");
+}
+
+
+// Generates the number of H-tag styling as choosen from $number-of-headlines-to-include
+// H-tag styling is only available if the variable $number-of-headlines-to-include is true (>0)
+@if($number-of-headlines-to-include) {  
+  @for $i from 1 through $number-of-headlines-to-include {
+    h#{$i} {
+      @extend %heading;
+      @extend %h#{$i};
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "modern_webdev_project",
+  "version": "1.0.0",
+  "description": "Travel site",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": "node app/server/server.js",
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonas-graae/buildtools_website.git"
+  },
+  "author": "Jonas Graae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonas-graae/buildtools_website/issues"
+  },
+  "homepage": "https://github.com/jonas-graae/buildtools_website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.1.0",
+    "group-css-media-queries-loader": "^3.0.2",
+    "html-loader": "^1.3.0",
+    "html-webpack-inline-svg-plugin": "^2.3.0",
+    "html-webpack-plugin": "^4.4.1",
+    "jest": "^26.4.2",
+    "media-query-plugin": "^1.3.1",
+    "mini-css-extract-plugin": "^0.11.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.1",
+    "style-loader": "^1.2.1",
+    "supertest": "^5.0.0",
+    "terser-webpack-plugin": "^4.2.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "workbox-webpack-plugin": "^5.1.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}

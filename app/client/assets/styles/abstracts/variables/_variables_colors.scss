@@ -1,0 +1,26 @@
+// COLORS
+// Theme colors
+$color-primary: #55c57a;
+$color-secondary: #6699aa;
+
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+$color-secondary-light: lighten($color-secondary, 10%);
+$color-secondary-dark: darken($color-secondary, 10%);
+
+// Standard colors
+$color-primary-white: #fbfbfb;
+
+$background-light: #ededf1;
+$background-dark: #e3e6e1; //der er ikke en dark lige P.T
+
+$table-color: rgb(241, 241, 241); //#fafafa
+
+$color-white: #fff;
+$color-black: #2e2e2e;
+
+$color-footer-font: #888;
+$color-footer: #333;
+
+$color-checkbox: rgb(88, 202, 255);
+$color-checkbox-light: rgba(88, 202, 255, 0.3);

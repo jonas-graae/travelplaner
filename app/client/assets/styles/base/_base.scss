@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $default-font-size;
+  font-family: $default-font-stack;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  background-color: $background-light;
+  min-height: 100vh;
+  color: $default-font-color;
+}

@@ -1,0 +1,17 @@
+// @mixin grid-unequal($cw: 40%, $gapColumn: $padding, $gapRow: $padding) {
+//     display: grid;
+//     grid-gap: $gridGap;
+//     grid-template-columns: $cw auto;  
+// }
+
+// Flexbox mixins (Add justify-content: "value", for other value than space-between)
+@mixin flexbox-row ($justify: space-between) {
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin flexbox-column ($justify: space-between) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: column;
+}

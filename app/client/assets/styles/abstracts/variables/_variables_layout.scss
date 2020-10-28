@@ -1,0 +1,23 @@
+//BREAKPOINTS
+
+//$phone:
+// $tab-port: 48em;
+// $tab-land: 84em;
+// $big-desktop: 112em;
+$breakpoint-mobile: 1em;
+$breakpoint-tablet: 76.8rem; //=768px
+$breakpoint-laptop: 102.4rem; //64em)	≥ 1024px
+$breakpoint-desktop: 128rem; // 80em)	≥ 1280px
+
+
+
+
+//GRID
+
+//grid variables for columns
+$max-columns-s: 3;
+$max-columns-m: 4;
+$max-columns-xl: 6;
+
+$gap-column: 20px;
+$gap-row: 20px;

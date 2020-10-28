@@ -1,0 +1,5 @@
+@import 'grid';
+
+@if $grid == true {
+    @include optional_grid;
+}

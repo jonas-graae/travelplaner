@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta https-equiv="X-UA-Compatible" content="ie=edge">
+  <meta 
+    name="description" 
+    content="Description Goes here" 
+  />
+  <meta name="robots" href="index, follow">
+  <meta name="keywords" content="Keywords here">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8f2BlVwnHkEuYrZhe7JknUT9cDpJk-Nc&libraries=&v=weekly"
+      defer
+    ></script>
+  <title>title</title>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <img src="./assets/images/logo.png" alt="">
+        </div>
+    </header>
+    <main class="wrapper">
+        <section>
+            <div class="hero active hero_1">
+                <div class="hero__tagline">
+                    <h1>London<span class="dot">.</span></h1> 
+                    <h3>Walk around the streets of London and see cultural heritage, impressive buildings and much more!</h3>
+                    <div data-city="London" class="container-button">
+                        <button class="btn btn-full go_today">Go Today</button>
+                        <button class="btn btn-ghost pick_date">Pick a date</button>   
+                    </div>
+                    <div class="container_trigger">
+                        <label class="search_travel_trigger" for="travel_search_trigger">Choose destination &rarr;</label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="hero hero_2">
+                <div class="hero__tagline">
+                    <h1>Copenhagen<span class="dot">.</span></h1> 
+                    <h3>Visit Copenhagen and see why danes is so happy</h3>  
+                    <div data-city="Copenhagen"class="container-button">
+                        <button class="btn btn-full go_today">Go Today</button>
+                        <button class="btn btn-ghost pick_date">Pick a date</button>   
+                    </div>
+                    <div class="container_trigger">
+                        <label class="search_travel_trigger" for="travel_search_trigger">Choose destination</label>
+                    </div> 
+                </div>
+            </div>
+    
+            <div class="hero hero_3">
+                <div class="hero__tagline">
+                    <h1>Barcelona<span class="dot">.</span></h1> 
+                    <h3>Take a tour to Europas finest beaches in Barcelona, and eat some tapas!</h3>  
+                    <div data-city="Barcelona" class="container-button">
+                        <button class="btn btn-full go_today">Go Today</button>
+                        <button class="btn btn-ghost pick_date">Pick a date</button>   
+                    </div> 
+                    <div class="container_trigger">
+                        <label class="search_travel_trigger" for="travel_search_trigger">Choose destination</label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="hero hero_4">
+                <div class="hero__tagline">
+                    <h1>New York<span class="dot">.</span></h1> 
+                    <h3>Take a city Break in New york, and see all the amazing sights and shopping streets</h3> 
+                    <div data-city="New York" class="container-button">
+                        <button class="btn btn-full go_today">Go Today</button>
+                        <button class="btn btn-ghost pick_date">Pick a date</button>   
+                    </div>
+                    <div class="container_trigger">
+                        <label class="search_travel_trigger" for="travel_search_trigger">Choose destination</label>
+                    </div>
+                    
+                </div>
+            </div>
+            <input type="checkbox" name="show_travel_search_form" id="travel_search_trigger">
+            <form id="travel_search">
+                <label for="travel_search_trigger" class="cross"></label>
+                <label for="place">Travel To</label>
+                <input type="text" name="place" id="destination" placeholder="Destination">
+                <label for="place">When</label>
+                <input type="text" name="place" id="date">
+                <button id="search_travel_button" class="btn btn-ghost">Show me
+                    <!-- <svg x="0px" y="0px" viewBox="0 0 461.072 461.072" style="enable-background:new 0 0 461.072 461.072;" xml:space="preserve">
+                        <path d="M413.604,176.823L413.604,176.823l-108.911-0.174l-88.255-72.613c-8.976-7.427-20.259-11.493-31.909-11.5h-20.05
+                                    c-11.046,0.002-19.998,8.958-19.996,20.004c0.001,4.45,1.486,8.773,4.22,12.284l40.236,51.641l-97.3-0.156
+                                    c-4.32-0.059-8.268-2.454-10.316-6.258c-0.285-0.498-0.611-0.97-0.977-1.412l-28.653-34.633
+                                    c-10.269-12.427-28.668-14.177-41.096-3.908C0.38,138.542-2.866,152.81,2.693,164.843l30.464,66.007
+                                    c4.294,10.65,13.945,18.198,25.316,19.8c0.083,0.011,0.167,0.022,0.25,0.031l132.86,14.314l-64.272,70.241
+                                    c-0.058,0.064-0.115,0.129-0.172,0.194c-7.238,8.344-6.342,20.975,2.001,28.213c3.635,3.154,8.285,4.891,13.098,4.893h29.43
+                                    c11.941-0.001,23.487-4.273,32.552-12.045l99.352-80.529l109.834,1.989h0.182c26.183,0,47.484-22.684,47.484-50.566
+                                    C461.072,199.036,440.223,176.836,413.604,176.823z M164.483,112.536h20.046c7.003,0.006,13.785,2.455,19.176,6.925l69.45,57.139
+                                    l-58.83-0.092L164.483,112.536z M413.669,257.953l-113.38-2.053c-2.354-0.041-4.648,0.748-6.478,2.23l-102.3,82.919l-0.238,0.2
+                                    c-5.449,4.705-12.407,7.293-19.606,7.293h-29.42l77.431-84.615c3.729-4.074,3.449-10.4-0.625-14.128
+                                    c-1.572-1.439-3.562-2.338-5.681-2.566L61.013,230.811c-4.284-0.662-7.876-3.589-9.389-7.651c-0.064-0.16-0.133-0.319-0.2-0.476
+                                    l-30.569-66.222c-2.126-4.609-0.113-10.07,4.497-12.195c3.786-1.746,8.273-0.725,10.93,2.487l28.147,34.026
+                                    c5.7,9.582,16.042,15.435,27.191,15.387l321.954,0.37h0.017c15.411,0,27.484,13.569,27.484,30.708
+                                    C441.072,244.068,428.787,257.905,413.669,257.953z"/>
+                    </svg> -->
+                </button>
+            </form>
+        </section>
+        <section class="search__result">
+            <!-- Radio buttons for tabs menu -->
+            <input type="radio" name="view" id="resume" checked>
+            <input type="radio" name="view" id="maps">
+            <input type="radio" name="view" id="places">
+            <input type="radio" name="view" id="weather">
+            <input type="radio" name="view" id="images">
+            <div class="search__result--resume">
+                <div class="sr--inner">
+                    <h1 class="sr--title"></h1>
+                    <!-- <h3 class="sr--flagtitle"></h3> -->
+                    <!-- Inserts country flag in this div after load -->
+                    <div class="sr--flag">
+
+                    </div>
+                    <!-- insert pixabay images here -->
+
+                    <img class="logo" src="./assets/images/logo.png" alt="">
+                </div>
+                
+            </div> 
+            <nav class="search__result--nav">
+                <ul>
+                    <li class="resume">
+                        <label for="resume">
+                            <svg viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M23 8c0-.552-.447-1-1-1h-12c-.552 0-1 .448-1 1v15c0 .553.448 1 1 1h12c.553 0 1-.447 1-1v-15zm-12 14h10v-13h-10v13zm2-2h6v-1h-6v1zm3.751-15h-2.207l-1.245-2.671-9.97 4.649 3.671 7.873v4.731l-5.906-12.665c-.064-.137-.094-.28-.094-.422 0-.376.214-.737.578-.907l11.781-5.494c.137-.064.281-.094.422-.094.377 0 .738.214.907.578l2.063 4.422zm-.751 5.086c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4m-1.587 5.331l.005.025c.121.53.27.968.542 1.488-.759-.28-1.327-.767-1.723-1.513h1.176zm2.255 0c-.147.575-.353 1.02-.668 1.504-.329-.5-.525-.951-.668-1.504h1.336zm2.094 0c-.391.736-1.001 1.241-1.717 1.502.26-.496.439-1.012.542-1.502h1.175zm.299-1.938h-1.361c.031.32.034.726.013 1.042h1.348c.056-.346.055-.696 0-1.042m-2.261 0h-1.601c-.037.364-.038.757-.013 1.042h1.628c.027-.342.02-.703-.014-1.042m-2.5 0h-1.361c-.056.346-.056.696 0 1.042h1.348c-.023-.368-.017-.667.01-1.016l.003-.026zm4.462-.896c-.398-.745-.999-1.245-1.748-1.513.247.485.413.97.539 1.492l.005.021h1.204zm-2.127 0c-.155-.565-.346-1.01-.635-1.497-.271.428-.507 1.011-.636 1.497h1.271zm-3.398 0h1.205c.117-.521.32-1.065.548-1.523-.772.273-1.353.772-1.753 1.523"/></svg>
+                        </label>
+                    </li>
+                    <li class="maps">
+                        <label for="maps">
+                            <svg viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.207 16.434l3.769-1.866-3.863-3.295 1.195-.591 6.253 2.111 2.987-1.479c.788-.395 2.089-.289 2.384.307.047.095.068.203.068.319-.003.609-.613 1.434-1.269 1.764l-2.987 1.479-2.111 6.253-1.195.591-.279-5.069-3.769 1.866-.778 1.873-.835.414-.293-2.831-2.074-1.949.836-.414 1.961.517zm-2.187 4.194c-4.82 1.541-8.629-2.376-9.02-4.628 1.573 1.733 4.624 3.261 7.973 2.256l.886.839.161 1.533zm-8.886-6.985c-.088-.535-.134-1.084-.134-1.643 0-5.523 4.477-10 10-10 4.927 0 9.023 3.565 9.848 8.256l-1.606.802c-1.25-.475-4.441-1.667-4.441-1.667-.645-.227-1.339-.455-1.687-.338.086-.379-.164-.72-.541-.994-.093-.068-.844-.588-.641-.246l.658.654c-.033.022-.173-.238-.173-.048.044-.112.016.483-.087.288-.045-.074.075-.115.005-.222 0-.071-.189-.14-.227-.188-.104-.13-.381-.415-.531-.483-.041-.019-.636.073-.686.092l-.149.259c-.125.046-.24.105-.35.178l-.13.294c-.058.05-.638.242-.641.25.025-.063-.406-.143-.378-.268.032-.137.178-.567.14-.723-.04-.165.895.236.956-.197.024-.187.038-.406-.262-.437.057.006.58-.205.666-.3.122-.14.401-.37.604-.37.236 0 .185-.344.294-.512.109.044-.059.313.072.422-.008-.085.371.047.408.028.087-.047.571-.019.496-.247-.084-.231.042-.162.15-.211-.019.008.283-.515.335-.344-.035-.176-.35.062-.46.054-.254-.021-.147-.434-.05-.555.074-.096-.203-.213-.206-.03-.005.274-.26.522-.202.887.091.549-.612-.132-.673-.095-.234.141-.424-.178-.304-.371.124-.196.42-.186.544-.396.086-.148.186-.32.321-.433.445-.374.568-.075 1.012-.034.435.04.147.103.088.27-.058.159.238.215.34.082.059-.076.192-.269.249-.411.074-.185.751-.164.278-.447-.312-.186-1.67-.56-2.58-.56-.197 0-.334.218-.484.343-.297.246-1.056.729-1.479.582-.433-.149-1.359.55-1.507.555-.055.003.002-.529.298-.567-.129.018 1.039-.59 1.007-.717-.038-.15-2.332.685-2.23.853.048.076.249.076-.013.245-.15.09-.311.667-.452.667-.421.184-.447-.362-.915.341l-.746.301c-1.106 1.175-1.871 2.664-2.149 4.318-.011.067.278.188.316.234.093.112.093.593.139.751.115.398.399.62.617.982.128.216.341.762.274.988.091-.148.892.68 1.038.852.345.406.612.898.051 1.299-.146.106.125.658.108.97-2.552-.493-4.198-3.043-4.198-3.043zm10.308.832c-.01-.166-.114-.363-.331-.3-.47.137-.327-.368-.669-.344-.247.017-.45.174-.679.243-.288.086-.583-.068-.868-.104-1.173-.148-1.555-1.488-1.249-2.456.031-.158-.095-.452-.04-.574.131-.293.401-.623.635-.845.131-.125.301-.093.456-.19.239-.151.242-.461.476-.651.334-.272.789-.266 1.224-.323.231-.031 1.113-.222 1.252-.05 0 .031.151.48-.003.478l-.013-.001.013.001c.089.008.186.05.288.106l-.575.285-.177.101c-.142.093-.27.207-.378.337-.305.369-.442.859-.373 1.333.025.168.075.332.148.485.073.153.169.295.284.42l.147.141 1.901 1.621-.887.44-.582-.153zm.51-5.666c-.029-.055.285-.084.341-.084.062.007-.162.376-.341.084zm-1.792-2.56l.09-.026-.043.114c.072.129.019.206.007.276l-.124.077c-.044.056.215.063.217.071.01.028-.312.074-.252.142.079.114.687-.162.59-.146.187-.095.024-.105-.081-.159-.036-.179-.066-.456-.177-.566l.073-.085c-.173-.249-.3.302-.3.302zm-.43.454c-.071.029-.141-.016-.072-.086l.073-.089-.007-.04.058-.072.06-.015.124-.087c.036.008.121.078.092.123l-.066.082c-.015.139-.155.138-.26.183l-.002.001.002-.001-.002.001z"/></svg>
+                        </label>
+                    </li>
+                    <li class="places">
+                        <label for="places">
+                            <svg viewBox="0 0 24 24"><path d="M18 0c-3.148 0-6 2.553-6 5.702 0 4.682 4.783 5.177 6 12.298 1.217-7.121 6-7.616 6-12.298 0-3.149-2.852-5.702-6-5.702zm0 8c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2zm-12-3c-2.099 0-4 1.702-4 3.801 0 3.121 3.188 3.451 4 8.199.812-4.748 4-5.078 4-8.199 0-2.099-1.901-3.801-4-3.801zm0 5.333c-.737 0-1.333-.597-1.333-1.333s.596-1.333 1.333-1.333 1.333.596 1.333 1.333-.596 1.333-1.333 1.333zm6 5.775l-3.215-1.078c.365-.634.777-1.128 1.246-1.687l1.969.657 1.92-.64c.388.521.754 1.093 1.081 1.75l-3.001.998zm12 7.892l-6.707-2.427-5.293 2.427-5.581-2.427-6.419 2.427 3.62-8.144c.299.76.554 1.776.596 3.583l-.443.996 2.699-1.021 4.809 2.091.751-3.725.718 3.675 4.454-2.042 3.099 1.121-.461-1.055c.026-.392.068-.78.131-1.144.144-.84.345-1.564.585-2.212l3.442 7.877z"/></svg>
+                        </label>
+                    </li>
+                    <li class="weather">
+                        <label for="weather">
+                            <svg viewBox="0 0 24 24"><path d="M17.5 2c.827 0 1.5.673 1.5 1.5v7.525c0 1.569.514 2.287 1.411 3.05 1.01.858 1.589 2.106 1.589 3.425 0 2.481-2.019 4.5-4.5 4.5s-4.5-2.019-4.5-4.5c0-1.319.579-2.567 1.59-3.425.896-.761 1.41-1.479 1.41-3.05v-7.525c0-.827.673-1.5 1.5-1.5zm0-2c-1.933 0-3.5 1.567-3.5 3.5v7.525c0 .587-.258 1.146-.705 1.525-1.403 1.192-2.295 2.965-2.295 4.95 0 3.59 2.909 6.5 6.5 6.5s6.5-2.91 6.5-6.5c0-1.985-.892-3.758-2.295-4.95-.447-.38-.705-.938-.705-1.525v-7.525c0-1.933-1.567-3.5-3.5-3.5zm2.107 14.718c-1.012-.89-1.607-1.734-1.607-3.22v-6.498h-1v6.498c0 1.484-.597 2.332-1.607 3.22-.794.698-1.393 1.642-1.393 2.782 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-1.14-.599-2.083-1.393-2.782zm-9.607-6.218c0 1.933-1.567 3.5-3.5 3.5s-3.5-1.567-3.5-3.5 1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5zm-8 0c0-.171.032-.333.051-.5h-2.051v1h2.051c-.019-.167-.051-.329-.051-.5zm1.705-3.501l-1.448-1.449-.707.707 1.448 1.448c.21-.261.445-.497.707-.706zm6.297.706l1.447-1.448-.707-.707-1.448 1.448c.263.21.498.445.708.707zm-3.502-1.705c.171 0 .334.032.5.05v-2.05h-1v2.05c.166-.018.329-.05.5-.05zm0 9c-.171 0-.334-.032-.5-.05v2.05h1v-2.05c-.166.018-.329.05-.5.05zm4.449-5c.019.167.051.329.051.5l-.051.5h2.051v-1h-2.051zm-7.951 3.294l-1.448 1.449.707.707 1.448-1.448c-.262-.21-.497-.446-.707-.708zm6.296.708l1.448 1.448.707-.707-1.447-1.448c-.21.262-.445.497-.708.707z"/></svg>
+                        </label>
+                    </li>
+                    <li class="images">
+                        <label for="images">
+                            <svg viewBox="0 0 24 24"><path d="M9 12c0-.552.448-1 1.001-1s.999.448.999 1-.446 1-.999 1-1.001-.448-1.001-1zm6.2 0l-1.7 2.6-1.3-1.6-3.2 4h10l-3.8-5zm5.8-7v-2h-21v15h2v-13h19zm3 2v14h-20v-14h20zm-2 2h-16v10h16v-10z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search__result--view">
+                <div class="tabs-view maps">
+                    <div id="map" style="height:100%"></div>
+                </div>
+
+                <div class="tabs-view places">
+                    <h2 class="sr--subtitle">Find the best places to visit in <span class="cityname"></span><span class="dot">.</span></h2>
+
+                    <div class="construction">
+                        <h3>This page is under construction, and will be added at a later point. As i want to replace geonames with google API's geocode and places, to make a far better and precise expirence with an interactive map
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="tabs-view weather">
+                    <h2 class="sr--subtitle"><span class="cityname"></span>, <i>country</i></h2>
+                    <div class="weather__grid grid m_2">
+                        <div class="weather__today">
+
+                        </div>
+                        <div class="weather__days">
+
+                        </div>
+                        <div class="weather__hourly">
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tabs-view images">
+
+                    <h2 class="sr--subtitle">Get a taste of beautiful <span class="cityname"></span><span class="dot">.</span></h2>
+                    <div class="sr--gallery grid m_2 xl_3">
+                        
+                    </div>
+                </div>
+            </div>    
+        </section>
+    </main>
+</body>
+</html>

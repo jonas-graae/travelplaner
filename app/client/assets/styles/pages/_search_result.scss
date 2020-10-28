@@ -1,0 +1,271 @@
+.search__result { 
+    position: fixed;
+    top: 0; 
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    background: #30343F;
+    @include flexbox-row();
+    opacity: 0;
+    visibility: hidden;
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    &--nav {
+        background-color: $default-font-color;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 500;
+        
+
+        @include desktop {
+            height: 100%;
+            width: auto;
+            position: relative;
+            border-right: 1px solid $default-font-color;
+            border-top: none;
+        }
+
+        ul {
+            @include flexbox-row(start);
+            width: 100%;
+
+
+            @include desktop {
+                flex-direction: column;
+                width: 100px;
+            }
+        }
+
+        li {
+            list-style: none;
+            height: 65px;
+            width: calc(25%);
+            border-right: 1px solid #30343F;
+
+            @include desktop {
+                height: 100px;
+                width: 100px;
+                border-right: none;
+                border-bottom: 1px solid #30343F;
+            }
+
+            label {
+                width: 100%;
+                height: 100%;
+                @include flexbox-column(center);
+                align-items: center;
+            }
+
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: #30343F;
+
+                @include desktop {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+
+            &.resume {
+                @include desktop {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &--resume {
+        width: 100%;
+        padding: 30px;
+
+        @include desktop {
+            width: calc(35% - 100px)
+        }
+
+        .logo {
+            display: none;
+
+            @include desktop {
+                display: block;
+                max-width: 250px;
+                position: absolute;
+                bottom: 30px;
+            }   
+        }
+
+        & .travel_planer {
+            margin-top: 50px; 
+
+            & li {
+                list-style: none;
+                margin-bottom: 5px;
+            }
+        } 
+        
+        
+    }
+
+    &--view {
+        height: 100vh;
+        width: 100%;
+        
+        @include desktop {
+            min-width: 65%;
+        }
+
+        .tabs-view {
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-color: #30343F;
+            padding: 50px 30px calc(65px + 10px);
+
+            @include desktop {
+                padding: 50px 50px 30px;
+            }
+
+            &.images, &.weather {
+                overflow-y: scroll; /* Hide vertical scrollbar */
+
+                &::-webkit-scrollbar {
+                    display: none;
+                } 
+            }
+
+            &.maps {
+                padding: 0;
+                padding-bottom: 65px;
+
+                @include desktop {
+                    padding: 0; 
+                }
+            }
+        }
+    }
+
+    &.finished {
+        height: 100vh;
+        opacity: 1;
+        visibility: visible;
+        transition: 1s all ease-in-out;
+    }
+}
+
+// resume section are 100% on mobile and 30% on desktop
+#resume:checked ~ .search__result--view {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+// Set maps as default section activated on desktop
+#resume:checked ~ .search__result--nav .resume {
+    background-color: #30343F;
+    
+    & svg {
+        fill: $default-font-color;
+    }
+}
+
+// Set maps as default section activated on desktop
+#resume:checked ~ .search__result--nav .maps {
+    @include desktop {
+        background-color: #30343F;
+    }
+    
+    & svg {
+        @include desktop {
+            fill: $default-font-color;
+        }
+    }
+}
+
+// Set maps as default section activated on desktop
+#resume:checked ~ .search__result--view .maps {
+    @include desktop {
+        display: block;
+    }
+}
+
+#maps:checked ~ .search__result--resume,
+#places:checked ~ .search__result--resume,
+#weather:checked ~ .search__result--resume,
+#images:checked ~ .search__result--resume {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+// Radio buttons named with ID's activates sections
+#maps:checked ~ .search__result--view .maps,
+#places:checked ~ .search__result--view .places,
+#weather:checked ~ .search__result--view .weather,
+#images:checked ~ .search__result--view .images {
+    display: block;
+}
+
+.search__result--nav label:hover,
+#maps:checked ~ .search__result--nav .maps,
+#places:checked ~ .search__result--nav .places,
+#weather:checked ~ .search__result--nav .weather,
+#images:checked ~ .search__result--nav .images {
+    background-color: #30343F;
+}
+
+.search__result--nav label:hover svg, 
+#maps:checked ~ .search__result--nav .maps svg,
+#places:checked ~ .search__result--nav .places svg,
+#weather:checked ~ .search__result--nav .weather svg,
+#images:checked ~ .search__result--nav .images svg {
+    fill: $default-font-color;
+}
+
+.sr {
+    &--title {
+        font-size: 6rem;
+        margin-bottom: 0;
+    } 
+
+    &--subtitle {
+        font-size: 4rem;
+    }
+
+    &--gallery--photo {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        background-color: $default-font-color;
+    }
+
+    &--flagtitle {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    &--photo {
+        margin-top: 20px;
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+
+    &--flag {
+        display: inline-block;
+        transform: translateY(7px);
+    }
+
+    &--weather {
+        font-weight: lighter;
+        margin: -10px 0 0;
+        font-style: italic;
+    }
+}
